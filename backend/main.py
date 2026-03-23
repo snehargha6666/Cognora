@@ -21,7 +21,7 @@ app.add_middleware(
 # Load embedding model
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
-SERP_API_KEY = "78ca343f96ba067c64ef3f9196db5fc3f943bb49d94509c30e0f20b47a01e22f"
+SERP_API_KEY = "YOUR_SERP_API_KEY"
 
 class Query(BaseModel):
     query: str
