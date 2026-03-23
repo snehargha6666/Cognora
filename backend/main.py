@@ -5,9 +5,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from serpapi.google_search import GoogleSearch
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
+from upload import router as upload_router
 import numpy as np
 
 app = FastAPI()
+app.include_router(upload_router)
 
 # CORS (important)
 app.add_middleware(
